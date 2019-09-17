@@ -1,0 +1,63 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.banner {
+  position: relative;
+  & > img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    content: $mobile-banner-img;
+  }
+  & > div {
+    color: $text-color;
+    text-align: center;
+    width: 100%;
+    padding: 0 5px;
+    @include horizontal-vertical-alignment-center;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    & > img {
+      content: $desktop-banner-img;
+    }
+
+    & > div {
+      padding: 0 20px;
+    }
+  }
+}
+.img-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.card {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: $card-width;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px;
+  @include box-shadow(0px,0px,3px, #888888);
+  .card-img {
+    display: block;
+    width: 100%;
+    content: url("/assets/images/400x300.png");
+  }
+  .card-text {
+    text-align: center;
+  }
+  .card-button {
+    display: inline-block;
+    border: 3px black solid;
+    font-weight: bold;
+    padding: 5px 25px;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+}

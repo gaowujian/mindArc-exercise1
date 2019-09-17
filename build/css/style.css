@@ -1,0 +1,67 @@
+.banner {
+  position: relative;
+}
+.banner > img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  content: url("/assets/images/600x600.png");
+}
+.banner > div {
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 0 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 600px) {
+  .banner > img {
+    content: url("/assets/images/1920x650.png");
+  }
+  .banner > div {
+    padding: 0 20px;
+  }
+}
+
+.img-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.card {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 3px #888888;
+  -moz-box-shadow: 0px 0px 3px #888888;
+  box-shadow: 0px 0px 3px #888888;
+}
+.card .card-img {
+  display: block;
+  width: 100%;
+  content: url("/assets/images/400x300.png");
+}
+.card .card-text {
+  text-align: center;
+}
+.card .card-button {
+  display: inline-block;
+  border: 3px black solid;
+  font-weight: bold;
+  padding: 5px 25px;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */
